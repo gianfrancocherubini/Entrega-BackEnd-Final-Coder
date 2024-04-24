@@ -238,7 +238,7 @@ export class UsuarioController {
         
         let token=jwt.sign({...usuario}, "CoderCoder123", {expiresIn:"1h"})
         let mensaje=`Hola. Ha solicitado recuperar su contraseña!.
-            Haga click en el siguiente link: <a href="http://localhost:3012/recuperoPassword02?token=${token}">Recuperar Contraseña</a>
+            Haga click en el siguiente link: <a href="https://entrega-backend-final-coder-production.up.railway.app/recuperoPassword02?token=${token}">Recuperar Contraseña</a>
             para reestablecer su contraseña`;
 
         let respuesta = await enviarEmail(email, "Recupero Password", mensaje)
