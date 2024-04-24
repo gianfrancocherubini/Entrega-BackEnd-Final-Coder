@@ -8,7 +8,7 @@ export const router=Router()
 
 router.post('/consultasWs', auth,  UsuarioController.consultasWs);
 router.post('/premium/:cid', auth, UsuarioController.cambiarUsuario);
-router.post('/recupero01', auth, UsuarioController.recuperoPassword01);
+router.post('/recupero01', UsuarioController.recuperoPassword01);
 router.post('/recupero03', UsuarioController.recuperoPassword03);
 router.delete('/delete/:cid', auth, UsuarioController.eliminarUsuarioDeBaseDeDatos);
 router.delete('/inactividad', auth, UsuarioController.eliminarPorInactividad);
